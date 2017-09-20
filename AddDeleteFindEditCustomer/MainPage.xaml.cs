@@ -37,6 +37,7 @@ namespace AddDeleteFindEditCustomer
         private void CumstomerSearchButton_Click(object sender, RoutedEventArgs e)
         {
             //Search both BillingAddresses and ShippingAddresses
+            this.Frame.Navigate(typeof(CustomerSearch));
 
 
         }
@@ -91,5 +92,10 @@ namespace AddDeleteFindEditCustomer
             ZipCode = zipCode;
             Country = country;
         }
+
+        //private void buttonAction_Click()
+        //{
+        //    this.Frame.Navigate(typeof(CustomerSearch));
+        //}
     }
 }

@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="CumstomerSearchButton1" Content="Search" HorizontalAlignment="Left" Margin="122,394,0,0" VerticalAlignment="Top" Height="32" Width="105" Click="CumstomerSearchButton_Click"/>
+        <Button x:Name="CumstomerSearchButton" Content="Search" HorizontalAlignment="Left" Margin="122,394,0,0" VerticalAlignment="Top" Height="32" Width="105" Click="CumstomerSearchButton_Click"/>
         <TextBox x:Name="CompanyName1" HorizontalAlignment="Left" Margin="46,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="8" Width="260" PlaceholderText="Company Name" TextChanged="CompanyName_TextChanged"/>
         <TextBox x:Name="ContactName1" HorizontalAlignment="Left" Margin="46,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="8" Width="260" PlaceholderText="Contact Name" TextChanged="ContactName_TextChanged"/>
         <TextBox x:Name="StreetAddress3" HorizontalAlignment="Left" Margin="46,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="8" Width="260" PlaceholderText="Street Address"/>
