@@ -27,69 +27,29 @@ namespace AddDeleteFindEditCustomer
             this.InitializeComponent();
         }
 
-        private void isPOBox_Checked(object sender, RoutedEventArgs e)
-        {
-            // Search only billing addresses since we do not deleiver to P.O. Boxes
+        SearchCustomer.ShippingAddress objTextBox = (StreetAddress1)sender;
+        ShippingAddress shippingAddress = new ShippingAddress(StreetAddress1.value, string ContactName,);
 
-
-        }
+        public static object StreetAddress2 { get; private set; }
 
         private void CumstomerSearchButton_Click(object sender, RoutedEventArgs e)
         {
+           
+            
             //Search both BillingAddresses and ShippingAddresses
+            this.Frame.Navigate(typeof(CustomerSearch));
 
 
         }
 
-    }
-
-    public class ShippingAddress
-    {
-        public string CompanyName { get; set; }
-        public string ContactName { get; set; }
-        public string StreetAddress1 { get; set; }
-        public string StreetAddress2 { get; set; }
-        public string StateProvince { get; set; }
-        public string City { get; set; }
-        public string ZipCode { get; set; }
-        public string Country { get; set; }
-
-
-        public ShippingAddress(string companyName, string contactName, string streetAddress1, string streetAddress2, string stateProvince, string city, string zipCode, string country)
+        private void addCustomerButton_Click(object sender, RoutedEventArgs e)
         {
-            CompanyName = companyName;
-            ContactName = contactName;
-            StreetAddress1 = streetAddress1;
-            StreetAddress2 = streetAddress2;
-            StateProvince = stateProvince;
-            City = city;
-            ZipCode = zipCode;
-            Country = country;
+
         }
     }
 
-    public class BillingAddress
-    {
-        public string CompanyName { get; set; }
-        public string ContactName { get; set; }
-        public string StreetAddress1 { get; set; }
-        public string StreetAddress2 { get; set; }
-        public string StateProvince { get; set; }
-        public string City { get; set; }
-        public string ZipCode { get; set; }
-        public string Country { get; set; }
-
-
-        public BillingAddress(string companyName, string contactName, string streetAddress1, string streetAddress2, string stateProvince, string city, string zipCode, string country)
-        {
-            CompanyName = companyName;
-            ContactName = contactName;
-            StreetAddress1 = streetAddress1;
-            StreetAddress2 = streetAddress2;
-            StateProvince = stateProvince;
-            City = city;
-            ZipCode = zipCode;
-            Country = country;
-        }
-    }
 }
+
+
+
+
