@@ -1,13 +1,15 @@
 ﻿<Page
-    x:Class="CS270_Ver_2._0.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CS270_Ver_2._0"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    xmlns:DataBases="using:CS270_Ver_2._0.DataBases"
+    x:Class="CS270_Ver_2._0.MainPage"
+    mc:Ignorable="d" Height="473" Width="866.5">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <ListView x:Name="Results" HorizontalAlignment="Left" Height="195" Margin="10,10,0,0" VerticalAlignment="Top" Width="232" SelectionChanged="Results_SelectionChanged"/>
+        <ListView x:Name="MailingResults" HorizontalAlignment="Left" Height="224" Margin="10,239,0,0" VerticalAlignment="Top" Width="232"/>
     </Grid>
 </Page>

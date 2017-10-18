@@ -1,4 +1,5 @@
 ﻿using CS270_Ver_2._0.DataBases;
+using System.Collections.Generic;
 
 namespace CS270_Ver_2._0.Modules
 {
@@ -13,23 +14,12 @@ namespace CS270_Ver_2._0.Modules
         public string Country { get; set; }
         public string Zipcode { get; set; }
         public Billing_Address Billing = null;
-        public Mailing_Address Mailing = null;
 
-        public static void AddCustomer(string companyName, Billing_Address billing, Mailing_Address mailing)
+        public static void AddCustomer(string companyname, string contactname, string streetaddress1, string streetaddress2,
+            string stateorprovince, string city, string country, string zipcode)
         {
-            Aerial_Database.Aerial_Master.Add(new Master_Adress(companyName, billing, mailing));
-        }
-
-        public static void EditMailingAddress(int index, Mailing_Address newMailAdd)
-        {
-            Aerial_Database.Aerial_Master[index].Mailing.CompanyName = newMailAdd.CompanyName;
-            Aerial_Database.Aerial_Master[index].Mailing.ContactName = newMailAdd.ContactName;
-            Aerial_Database.Aerial_Master[index].Mailing.StreetAddress1 = newMailAdd.StreetAddress1;
-            Aerial_Database.Aerial_Master[index].Mailing.StreetAddress2 = newMailAdd.StreetAddress2;
-            Aerial_Database.Aerial_Master[index].Mailing.City = newMailAdd.City;
-            Aerial_Database.Aerial_Master[index].Mailing.StateOrProvince = newMailAdd.StateOrProvince;
-            Aerial_Database.Aerial_Master[index].Mailing.Country = newMailAdd.Country;
-            Aerial_Database.Aerial_Master[index].Mailing.Zipcode = newMailAdd.Zipcode;
+            Aerial_Database.Aerial_Master.Add(new Billing_Address(companyname, contactname, streetaddress1, streetaddress2, stateorprovince,
+                city, country, zipcode));
         }
 
         public static void EditBillingAddress(int index, Billing_Address newBillAdd)
@@ -42,16 +32,6 @@ namespace CS270_Ver_2._0.Modules
             Aerial_Database.Aerial_Master[index].Billing.StateOrProvince = newBillAdd.StateOrProvince;
             Aerial_Database.Aerial_Master[index].Billing.Country = newBillAdd.Country;
             Aerial_Database.Aerial_Master[index].Billing.Zipcode = newBillAdd.Zipcode;
-        }
-    }
-
-    class Master_Adress : Customer_Constructor
-    {
-        public Master_Adress(string companyname, Billing_Address billing, Mailing_Address mailing)
-        {
-            CompanyName = companyname;
-            Billing = billing;
-            Mailing = mailing;
         }
     }
 
